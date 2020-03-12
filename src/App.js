@@ -2,14 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
-import CommonQuestions from './components/CommonQuestions';
-import ContactUs from './components/ContactUs';
 import Nav from './components/Nav';
-import PatientForms from './components/PatientForms';
-import Photos from './components/Photos';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import Rates from './components/Rates';
-import Services from './components/Rates';
+import Clients from './components/Clients';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -17,15 +12,10 @@ function App() {
       <div className="App">
         <Nav />
         <Route exact path="/" component={Home} />
+        <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/clients" component={Clients} />
         <Route path="/services" component={Services} />
-        <Route path="/patientforms" component={PatientForms} />
-        <Route path="/services" component={Services} />
-        <Route path="/commonquestions" component={CommonQuestions} />
-        <Route path="/rates" component={Rates} />
-        <Route path="/privacypolicy" component={PrivacyPolicy} />
-        <Route path="/contactus" component={ContactUs} />
-        <Route path="/photos" component={Photos} />
       </div>
     </Router>
   );
